@@ -21,19 +21,23 @@ public class ProjectConfigurations {
     it initializes its context and adds the returned value to the context.
     */
     @Bean
-    Vehicle vehicle() {
+    Vehicle vehicle1() {
         var vehicle = new Vehicle();
-        vehicle.setName("Audi 8");
+        vehicle.setName("Audi");
         return vehicle;
     }
 
     @Bean
-    String hello() {
-        return "Hello World";
+    Vehicle vehicle2() {
+        var vehicle = new Vehicle();
+        vehicle.setName("Honda");
+        return vehicle;
     }
 
     @Bean
-    Integer number() {
-        return 16;
+    Vehicle vehicle3() {
+        var vehicle = new Vehicle();
+        vehicle.setName("Ferrari");
+        return vehicle;
     }
 }
