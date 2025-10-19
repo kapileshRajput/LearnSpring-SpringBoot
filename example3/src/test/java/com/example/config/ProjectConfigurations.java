@@ -20,21 +20,21 @@ public class ProjectConfigurations {
     @Bean annotation, which lets spring know that it needs to call this method when
     it initializes its context and adds the returned value to the context.
     */
-    @Bean
+    @Bean(name = "audiVehicle")
     Vehicle vehicle1() {
         var vehicle = new Vehicle();
         vehicle.setName("Audi");
         return vehicle;
     }
 
-    @Bean
+    @Bean(value = "hondaVehicle")
     Vehicle vehicle2() {
         var vehicle = new Vehicle();
         vehicle.setName("Honda");
         return vehicle;
     }
 
-    @Bean
+    @Bean("ferrariVehicle")
     Vehicle vehicle3() {
         var vehicle = new Vehicle();
         vehicle.setName("Ferrari");
